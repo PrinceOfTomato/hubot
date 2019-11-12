@@ -49,26 +49,26 @@ module.exports = (robot) ->
       list_id = ''
       user_id = ''
       switch body.content.assignee.name
-          when MATSUE
-              list_id = HUBOT_TRELLO_POST_MATSUE
+          when process.env.MATSUE
+              list_id = process.env.HUBOT_TRELLO_POST_MATSUE
               user_id = 'ryotanoji1'
-          when MORITA
-              list_id = HUBOT_TRELLO_POST_MORITA
+          when process.env.MORITA
+              list_id = process.env.HUBOT_TRELLO_POST_MORITA
               user_id = 'ryotanoji1'
-          when SEINO
-              list_id = HUBOT_TRELLO_POST_SEINO
+          when process.env.SEINO
+              list_id = process.env.HUBOT_TRELLO_POST_SEINO
               user_id = 'ryotanoji1'
-          when YAMAGUCHI
-              list_id = HUBOT_TRELLO_POST_YAMAGUCHI
+          when process.env.YAMAGUCHI
+              list_id = process.env.HUBOT_TRELLO_POST_YAMAGUCHI
               user_id = 'ryotanoji1'
-          when NOJI
-              list_id = HUBOT_TRELLO_POST_NOJI
+          when process.env.NOJI
+              list_id = process.env.HUBOT_TRELLO_POST_NOJI
               user_id = 'ryotanoji1'
-          when TAKAYAMA
-              list_id = HUBOT_TRELLO_POST_TAKAYAMA
+          when process.env.TAKAYAMA
+              list_id = process.env.HUBOT_TRELLO_POST_TAKAYAMA
               user_id = 'ryotanoji1'
           else
-              list_id = HUBOT_TRELLO_POST_ALL
+              list_id = process.env.HUBOT_TRELLO_POST_ALL
               user_id = 'ryotanoji1'
 
       # 投稿メッセージを整形
