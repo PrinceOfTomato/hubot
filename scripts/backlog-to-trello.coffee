@@ -85,7 +85,6 @@ module.exports = (robot) ->
         name: title
         desc: description
         idList: list_id
-        idMembers: user_id
       }, (err, data) ->
         if (err)
           console.log err
