@@ -19,7 +19,7 @@
 #    MATSUE
 #    MORITA
 #    SEINO
-#    YANAGUCHI
+#    YAMAGUCHI
 #    NOJI
 #    TAKAYAMA
 #    ※heroku 環境設定
@@ -58,7 +58,7 @@ module.exports = (robot) ->
           when SEINO
               list_id = HUBOT_TRELLO_POST_SEINO
               user_id = 'ryotanoji1'
-          when YANAGUCHI
+          when YAMAGUCHI
               list_id = HUBOT_TRELLO_POST_YAMAGUCHI
               user_id = 'ryotanoji1'
           when NOJI
