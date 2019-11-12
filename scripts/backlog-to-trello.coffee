@@ -67,7 +67,7 @@ module.exports = (robot) ->
           when process.env.TAKAYAMA
               list_id = process.env.HUBOT_TRELLO_POST_TAKAYAMA
               user_id = 'ryotanoji1'
-          else
+          when 'ENRISE'
               list_id = process.env.HUBOT_TRELLO_POST_ALL
               user_id = 'ryotanoji1'
 
