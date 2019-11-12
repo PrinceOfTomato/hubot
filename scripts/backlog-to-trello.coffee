@@ -15,6 +15,7 @@
 #    HUBOT_TRELLO_POST_YAMAGUCHI
 #    HUBOT_TRELLO_POST_NOJI
 #    HUBOT_TRELLO_POST_TAKAYAMA
+#    BACKLOG_URL
 #
 #    MATSUE
 #    MORITA
@@ -28,7 +29,7 @@
 #   
 #
 
-backlogUrl = 'https://ryota-noji.backlog.jp/'
+backlogUrl = process.env.BACKLOG_URL
 
 module.exports = (robot) ->
   Trello = require("node-trello")
