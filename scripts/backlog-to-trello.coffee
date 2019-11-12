@@ -51,25 +51,25 @@ module.exports = (robot) ->
       switch body.content.assignee.name
           when process.env.MATSUE
               list_id = process.env.HUBOT_TRELLO_POST_MATSUE
-              user_id = 'ryotanoji1'
+              user_id = '5821cf813367548d6257adf2'
           when process.env.MORITA
               list_id = process.env.HUBOT_TRELLO_POST_MORITA
-              user_id = 'ryotanoji1'
+              user_id = '582065b115b6950e48fa6931'
           when process.env.SEINO
               list_id = process.env.HUBOT_TRELLO_POST_SEINO
-              user_id = 'ryotanoji1'
+              user_id = '5cf9b5fabce5b92a62c4d33f'
           when process.env.YAMAGUCHI
               list_id = process.env.HUBOT_TRELLO_POST_YAMAGUCHI
-              user_id = 'ryotanoji1'
+              user_id = '5cf9b57075f54c533cc781a8'
           when process.env.NOJI
               list_id = process.env.HUBOT_TRELLO_POST_NOJI
-              user_id = 'ryotanoji1'
+              user_id = '5cf9bfa126aec27f6b5bba8d'
           when process.env.TAKAYAMA
               list_id = process.env.HUBOT_TRELLO_POST_TAKAYAMA
-              user_id = 'ryotanoji1'
+              user_id = '5851f3feb339a2ac50dafff4'
           when 'ENRISE'
               list_id = process.env.HUBOT_TRELLO_POST_ALL
-              user_id = 'ryotanoji1'
+              user_id = '5821cf813367548d6257adf2'
 
       # 投稿メッセージを整形
       url = "#{backlogUrl}view/#{body.project.projectKey}-#{body.content.key_id}"
@@ -85,6 +85,7 @@ module.exports = (robot) ->
         name: title
         desc: description
         idList: list_id
+        idMembers: user_id
       }, (err, data) ->
         if (err)
           console.log err
