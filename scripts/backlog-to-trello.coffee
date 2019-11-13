@@ -49,7 +49,13 @@ module.exports = (robot) ->
 
       list_id = ''
       user_id = ''
-      switch body.content.assignee.name
+      assign_user = ''
+      if body.content.assignee.name?
+          assign_user = body.content.assignee.name
+      else
+          assign_user = 'ENRISE'
+
+      switch assign_user
           when process.env.MATSUE
               list_id = process.env.HUBOT_TRELLO_POST_MATSUE
               user_id = '5821cf813367548d6257adf2'
@@ -82,11 +88,16 @@ module.exports = (robot) ->
       description += "登録者：#{body.createdUser.name}\n\n"
       description += "#{body.content.description}"
 
+      due = ''
+      if body.content.dueDate?
+          due = body.content.dueDate
+
       t.post "/1/cards/", {
         name: title
         desc: description
         idList: list_id
         idMembers: user_id
+        due: due
       }, (err, data) ->
         if (err)
           console.log err
