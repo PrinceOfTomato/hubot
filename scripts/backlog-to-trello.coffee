@@ -76,7 +76,7 @@ module.exports = (robot) ->
               user_id = '5851f3feb339a2ac50dafff4'
           when 'ENRISE'
               list_id = process.env.HUBOT_TRELLO_POST_ALL
-              user_id = ''
+              user_id = '5821cf813367548d6257adf2'
 
       # 投稿メッセージを整形
       url = "#{backlogUrl}view/#{body.project.projectKey}-#{body.content.key_id}"
